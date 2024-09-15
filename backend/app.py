@@ -1,9 +1,12 @@
-#export GOOGLE_API_KEY="AIzaSyArLN1-bvRvLyjX17kmxAWo40Gh12f0Qro"
 
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import google.generativeai as genai
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 api_key = os.environ.get("GOOGLE_API_KEY")
 if api_key is None:
